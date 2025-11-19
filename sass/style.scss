@@ -1,9 +1,9 @@
-* {
+*  {
   font-family: Roboto, serif;
 }
 
 :root {
-  --location-bg-color: #EAEAEA ;
+  --location-bg-color: #EAEAEA
 }
 
 body {
@@ -29,7 +29,7 @@ header {
 
 .logo {
   height: 63px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
 }
 
 .logo img {
@@ -54,5 +54,3 @@ header {
   flex-direction: column;
   height: 287px;
 }
-
-/*# sourceMappingURL=style.css.map */
