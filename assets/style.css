@@ -3,7 +3,9 @@
 }
 
 :root {
-  --location-bg-color: #EAEAEA ;
+  --location-bg-color: #EAEAEA;
+  --main-bg-color: #F6F6F6;
+  --button-gradient: linear-gradient(#FF79DA, #9356DC);
 }
 
 body {
@@ -53,6 +55,65 @@ header {
   display: flex;
   flex-direction: column;
   height: 287px;
+  background-color: var(--main-bg-color);
+}
+.explor h2 {
+  padding: 39px 52px 10px;
+  text-align: center;
+  margin: 0;
+}
+.explor span {
+  font-size: 18px;
+  font-weight: 300;
+  padding-left: 34px;
+  padding-right: 34px;
+  text-align: center;
+}
+
+.btn-explor {
+  padding: 30px 82px;
+}
+.btn-explor button {
+  width: 218px;
+  height: 50px;
+  border-radius: 25px;
+  background: var(--button-gradient);
+  color: white;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.fonctions {
+  height: 440px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.fonctions h2 {
+  padding-top: 45px;
+  margin: 0;
+}
+.fonctions button {
+  width: 322.49px;
+  height: 72.36px;
+  border-radius: 20px;
+  border: none;
+  background: #f6f6f6;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  font-size: 16px;
+  font-weight: 500;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  padding-left: 40px;
+}
+
+.btn-fonctions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
