@@ -6,6 +6,8 @@
   --location-bg-color: #EAEAEA;
   --main-bg-color: #F6F6F6;
   --button-gradient: linear-gradient(#FF79DA, #9356DC);
+  --main-color: #9356DC;
+  --icons-color: #9a9996;
 }
 
 body {
@@ -92,7 +94,7 @@ header {
   padding-right: 20px;
 }
 .fonctions h2 {
-  padding-top: 45px;
+  padding: 45px 0 20px 0;
   margin: 0;
 }
 .fonctions button {
@@ -100,7 +102,7 @@ header {
   height: 72.36px;
   border-radius: 20px;
   border: none;
-  background: #f6f6f6;
+  background: var(--main-bg-color);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
   font-size: 16px;
   font-weight: 500;
@@ -113,7 +115,56 @@ header {
 .btn-fonctions {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
+  padding-left: 10px;
+}
+
+.btn-custom {
+  display: flex;
+  align-items: baseline;
+  position: relative;
+}
+.btn-custom span {
+  background: var(--main-color);
+  border-radius: 24px;
+  width: 24px;
+  line-height: 24px;
+  text-align: center;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  position: absolute;
+  top: 35%;
+  left: -11px;
+}
+.btn-custom .fa-mobile-screen-button {
+  color: var(--icons-color);
+}
+.btn-custom .fa-list-ul {
+  color: var(--icons-color);
+}
+.btn-custom .fa-store {
+  color: var(--main-color);
+}
+
+.restaurants {
+  background: var(--main-bg-color);
+  height: 1226px;
+  padding-top: 20px;
+}
+.restaurants h2 {
+  font-weight: 700;
+  padding-left: 20px;
+}
+
+.restaurants-cards {
+  width: 340px;
+  height: 1058px;
+  padding-left: 17px;
+  padding-right: 17px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
 }
 
 /*# sourceMappingURL=style.css.map */
