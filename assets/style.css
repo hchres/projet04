@@ -8,6 +8,9 @@
   --button-gradient: linear-gradient(#FF79DA, #9356DC);
   --main-color: #9356DC;
   --icons-color: #9a9996;
+  --footer-bg-color: #353535;
+  --new-bg-color: #99E2D0;
+  --new-text-color: #008766;
 }
 
 body {
@@ -38,6 +41,7 @@ header {
 .logo {
   height: 63px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  position: relative;
 }
 
 .logo img {
@@ -98,7 +102,7 @@ header {
   padding-right: 20px;
 }
 .fonctions h2 {
-  padding: 45px 0 20px 0;
+  padding: 45px 0 25px 0;
   margin: 0;
 }
 .fonctions button {
@@ -190,6 +194,25 @@ header {
   margin: -57px 0 0 -3px;
 }
 
+.new {
+  display: flex;
+  position: relative;
+  top: -165px;
+  left: 248px;
+  width: 80px;
+}
+.new span {
+  background: var(--new-bg-color);
+  width: 80px;
+  height: 29px;
+  align-content: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--new-text-color);
+  text-align: center;
+  border-radius: 2px;
+}
+
 .restaurant-details {
   color: black;
   padding-left: 20px;
@@ -206,6 +229,64 @@ header {
 .restaurant-details button {
   background: none;
   border: none;
+}
+
+.like {
+  display: flex;
+  justify-content: end;
+  position: relative;
+  top: -40px;
+  right: 20px;
+}
+
+footer {
+  height: 186px;
+  background: var(--footer-bg-color);
+  color: white;
+}
+footer h2 {
+  font-family: Shrikhand, serif;
+  font-weight: 400;
+  font-size: 18px;
+  margin: 0;
+  position: relative;
+  top: 20px;
+  left: 20px;
+}
+footer h3 {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+  position: relative;
+  top: 35px;
+  left: 40px;
+}
+footer ul {
+  margin: 0;
+  position: relative;
+  top: 35px;
+  list-style: none;
+  padding: 0;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+footer span {
+  font-size: 16px;
+  font-weight: 400;
+}
+footer i {
+  color: white;
+  position: relative;
+  top: 22px;
+  left: 20px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
 /*# sourceMappingURL=style.css.map */
