@@ -2,16 +2,16 @@
   font-family: Roboto, serif;
 }
 
-:root {
-  --location-bg-color: #EAEAEA;
-  --main-bg-color: #F6F6F6;
-  --button-gradient: linear-gradient(#FF79DA, #9356DC);
-  --main-color: #9356DC;
-  --icons-color: #9a9996;
-  --footer-bg-color: #353535;
-  --new-bg-color: #99E2D0;
-  --new-text-color: #008766;
-}
+//:root {
+  $location-bg-color: #EAEAEA;
+  $main-bg-color: #F6F6F6;
+  $button-gradient: linear-gradient(#FF79DA, #9356DC);
+  $main-color: #9356DC;
+  $icons-color: #9a9996;
+  $footer-bg-color: #353535;
+  $new-bg-color: #99E2D0;
+  $new-text-color: #008766;
+//}
 
 body {
   max-width: 100%;
@@ -22,10 +22,10 @@ h2 {
   font-size: 24px;
 }
 
-img {
-  width: 346px;
-  height: 231px;
-}
+//img {
+//  width: 346px;
+//  height: 231px;
+//}
 
 a {
   text-decoration: none;
@@ -57,7 +57,7 @@ header {
   padding-top: 15px;
   width: 100%;
   height: 50px;
-  background-color: var(--location-bg-color);
+  background-color: $location-bg-color;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -65,7 +65,7 @@ header {
   display: flex;
   flex-direction: column;
   height: 287px;
-  background-color: var(--main-bg-color);
+  background-color: $main-bg-color;
     h2 {
       padding: 39px 52px 10px;
       text-align: center;
@@ -81,12 +81,13 @@ header {
 }
 
 .btn-explor {
-  padding: 30px 82px;
+  padding: 30px 84px;
+  width: 218px;
     button {
-      width: 218px;
+      width: 100%;
       height: 50px;
       border-radius: 25px;
-      background: var(--button-gradient);
+      background: $button-gradient;
       color: white;
       border: none;
       font-size: 16px;
@@ -109,7 +110,7 @@ header {
         height: 72.36px;
         border-radius: 20px;
         border: none;
-        background: var(--main-bg-color);
+        background: $main-bg-color;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
         font-size: 16px;
         font-weight: 500;
@@ -133,7 +134,7 @@ header {
   align-items: baseline;
   position: relative;
   span {
-    background: var(--main-color);
+    background: $main-color;
     border-radius: 24px;
     width: 24px;
     line-height: 24px;
@@ -146,18 +147,18 @@ header {
     left: -11px;
   }
     .fa-mobile-screen-button {
-      color: var(--icons-color);
+      color: $icons-color;
     }
       .fa-list-ul {
-        color: var(--icons-color);
+        color: $icons-color;
       }
        .fa-store {
-          color: var(--main-color);
+          color: $icons-color;
         }
 }
 
 .restaurants {
-  background: var(--main-bg-color);
+  background: $main-bg-color;
   height: 1226px;
   padding-top: 20px;
     h2 {
@@ -167,7 +168,7 @@ header {
 }
 
 .restaurants-cards {
-  width: 340px;
+  width: calc(100% - 34px);
   height: 1058px;
   padding-left: 17px;
   padding-right: 17px;
@@ -183,15 +184,15 @@ header {
 }
 
 .plate-img {
-  max-width: 100%;
-  max-height: 100%;
-  height: 231px;
-  width: 346px;
+  height: 100%;
+  width: 100%;
   overflow: hidden;
   margin-bottom: -57px;
   border-radius: 15px;
   img {
-    margin: -57px 0 0 -3px;
+    margin: -57px 0 0 0;
+    width: 100%;
+    height: 90%;
   }
 }
 
@@ -202,13 +203,13 @@ header {
   left: 248px;
   width: 80px;
    span {
-    background: var(--new-bg-color);
+    background: $new-bg-color;
     width: 80px;
     height: 29px;
     align-content: center;
     font-size: 14px;
      font-weight: 500;
-     color: var(--new-text-color);
+     color: $new-text-color;
      text-align: center;
      border-radius: 2px;
    }
@@ -217,10 +218,12 @@ header {
 .restaurant-details {
   color: black;
   padding-left: 20px;
+  position: relative;
+  top: -10px;
       h3 {
         font-size: 18px;
         font-weight: 700;
-        margin-bottom: 3px;
+        margin: 0 0 3px 0;
       }
         span {
           font-size: 17px;
@@ -242,7 +245,7 @@ header {
 
 footer {
   height: 186px;
-  background: var(--footer-bg-color);
+  background: $footer-bg-color;
   color: white;
     h2 {
       font-family: Shrikhand, serif;
