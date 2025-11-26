@@ -26,6 +26,9 @@ header {
   height: 63px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
   position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .logo img {
@@ -65,11 +68,13 @@ header {
 }
 
 .btn-explor {
-  padding: 30px 84px;
-  width: 218px;
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 .btn-explor button {
-  width: 100%;
+  width: 218px;
   height: 50px;
   border-radius: 25px;
   background: linear-gradient(#FF79DA, #9356DC);
@@ -91,7 +96,7 @@ header {
   margin: 0;
 }
 .fonctions button {
-  width: 322.49px;
+  width: 100%;
   height: 72.36px;
   border-radius: 20px;
   border: none;
