@@ -91,10 +91,14 @@ header {
   justify-content: center;
 }
 
-.logo img {
-  width: 197px;
-  height: 36px;
-  padding: 14px 89px;
+.logo span {
+  font-family: Shrikhand, serif;
+  font-weight: 400;
+  font-size: 30px;
+  position: relative;
+  top: 4px;
+  height: 44px;
+  width: 162px;
 }
 
 .location {
@@ -395,3 +399,48 @@ footer {
   flex-direction: column;
   gap: 4px;
 }
+
+@media (max-width: 1440px) {
+
+  header {
+    height: 146px;
+  }
+
+  .logo {
+    height: 96px;
+  }
+
+  .logo span {
+    top: 30px;
+  }
+
+  .location {
+    height: 50px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
