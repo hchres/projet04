@@ -231,12 +231,57 @@ header {
 .like {
   display: flex;
   justify-content: end;
-  position: relative;
-  top: -40px;
-  right: 20px;
+  position: absolute;
+  top: -5px;
+  right: 15px;
 }
-.like :active {
+
+.like__toggle {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.like__btn {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.like__btn i {
+  position: relative;
+  z-index: 1;
+  transition: color 0.15s ease, transform 0.15s ease;
+}
+
+.like__btn::after {
+  content: "\f004";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 2em;
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
   background: linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
+  color: transparent;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.like__btn:active i {
+  transform: scale(0.95);
+}
+
+.like__toggle:checked + .like__btn::after {
+  opacity: 1;
+  transform: scale(1);
 }
 
 footer {
