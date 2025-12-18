@@ -96,7 +96,7 @@ header {
   font-weight: 400;
   font-size: 30px;
   position: relative;
-  top: 4px;
+  top: 10px;
   height: 44px;
   width: 162px;
 }
@@ -104,12 +104,17 @@ header {
 .location {
   display: flex;
   justify-content: center;
-  gap: 17px;
-  padding-top: 15px;
   width: 100%;
   height: 50px;
   background-color: $location-bg-color;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.location_content {
+  display: flex;
+  position: relative;
+  top: 15px;
+  gap: 17px;
 }
 
 .explor {
@@ -118,21 +123,35 @@ header {
   height: 287px;
   background-color: $main-bg-color;
     h2 {
-      padding: 39px 52px 10px;
+      position: fixed;
+      top: 152px;
       text-align: center;
       margin: 0;
-    }
+      width: 65%;
+      height: 68px;
+      }
       span {
         font-size: 18px;
         font-weight: 300;
-        padding-left: 34px;
-        padding-right: 34px;
+        position: fixed;
+        top: 220px;
         text-align: center;
+        height: 46px;
+        width: 90%;
       }
+ }
+
+.title_explor {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
 }
 
 .btn-explor {
-  padding-top: 30px;
+  position: relative;
+  top: 180px;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -157,14 +176,18 @@ header {
 
 .fonctions {
   height: 440px;
-  padding-left: 20px;
-  padding-right: 20px;
+  position: relative;
+  top: 70px;
     h2 {
-      padding: 45px 0 25px 0;
+      position: relative;
+      top: -30px;
+      width: 275px;
+      height: 31px;
+      left: 20px;
       margin: 0;
     }
       button {
-        width: 100%;
+        width: 95%;
         height: 72.36px;
         border-radius: 20px;
         border: none;
@@ -184,7 +207,7 @@ header {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding-left: 10px;
+  padding-left: 30px;
 }
 
 .btn-custom {
@@ -400,7 +423,7 @@ footer {
   gap: 4px;
 }
 
-@media (max-width: 1440px) {
+@media (min-width: 1040px) {
 
   header {
     height: 146px;
@@ -414,9 +437,6 @@ footer {
     top: 30px;
   }
 
-  .location {
-    height: 50px;
-  }
 }
 
 

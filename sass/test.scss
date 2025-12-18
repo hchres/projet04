@@ -1,71 +1,12 @@
-
-$fill-gradient: linear-gradient(135deg, #f97316, #facc15);
-
-.like {
-  display: flex;
-  justify-content: end;
-  position: absolute;
-  top: 10px;
-  right: 25px;
-}
-
-/* Checkbox invisible mais accessible */
-.like__toggle {
-  position: absolute;
-  opacity: 0;
-  width: 1px;
-  height: 1px;
-}
-
-/* “Bouton” */
-.like__btn {
-  width: 44px;
-  height: 44px;
+.center-text {
+  position: fixed;
+  inset: 0;               // couvre tout le viewport
   display: grid;
-  place-items: center;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;     // pas de débordement
-  border-radius: 999px; // safe (zone ronde)
+  place-items: center;    // centre horizontal + vertical
+  text-align: center;
+  margin: 0;              // évite les décalages liés aux marges
 }
 
-/* Icône contour au-dessus */
-.like__btn i {
-  position: relative;
-  z-index: 1;
-  pointer-events: none;
-  transition: color .15s ease, transform .15s ease;
-}
-
-/* Remplissage (coeur plein) sous le contour */
-.like__btn::after {
-  content: "\f004"; // coeur Font Awesome
-  font-family: "Font Awesome 6 Free";
-  font-weight: 900; // solid
-  font-size: 2em;
-  position: absolute;
-  inset: 0;
-  display: grid;
-  place-items: center;
-  background: $fill-gradient;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  opacity: 0;
-  transform: scale(0);
-  transition: opacity .15s ease, transform .15s ease;
-}
-
-/* Animation au clic */
-.like__btn:active i {
-  transform: scale(.95);
-}
-
-/* Toggle: coché = rempli, décoché = vide */
-.like__toggle:checked + .like__btn::after {
-  opacity: 1;
-  transform: scale(1);
-}
 
 ///* Optionnel: contour blanc quand rempli (lisible sur la couleur) */
 //.like__toggle:checked + .like__btn i {
