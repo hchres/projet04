@@ -123,7 +123,7 @@ header {
   height: 287px;
   background-color: $main-bg-color;
     h2 {
-      position: fixed;
+      position: absolute;
       top: 152px;
       text-align: center;
       margin: 0;
@@ -133,7 +133,7 @@ header {
       span {
         font-size: 18px;
         font-weight: 300;
-        position: fixed;
+        position: absolute;
         top: 220px;
         text-align: center;
         height: 46px;
@@ -177,7 +177,7 @@ header {
 .fonctions {
   height: 440px;
   position: relative;
-  top: 70px;
+  top: 80px;
     h2 {
       position: relative;
       top: -30px;
@@ -436,6 +436,43 @@ footer {
   .logo span {
     top: 30px;
   }
+
+  .explor {
+      h2 {
+      font-size: 40px;
+      font-weight: 700;
+      top: 176px;
+    }
+      span {
+        top: 255px;
+      }
+  }
+
+  .fonctions {
+    height: 228px;
+    padding-left: 150px;
+      button {
+        width: 335px;
+      }
+  }
+
+  .btn-fonctions {
+    flex-direction: row;
+  }
+
+  .restaurants {
+    padding: 0 180px 0 180px;
+    height: 664px;
+  }
+
+    .restaurants-cards {
+      gap: 50px;
+      width: calc(100% - 180px);
+      align-items: center;
+      height: 608px;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
 
 }
 

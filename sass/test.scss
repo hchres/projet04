@@ -7,6 +7,22 @@
   margin: 0;              // évite les décalages liés aux marges
 }
 
+.row {
+  padding: 0 50px 0 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  row-gap: 25px;
+  column-gap: 25px;
+}
+
+.column {
+  width: 20%;
+  min-width: 40%;
+  background-color: darkviolet;
+  text-align: center;
+}
 
 ///* Optionnel: contour blanc quand rempli (lisible sur la couleur) */
 //.like__toggle:checked + .like__btn i {
