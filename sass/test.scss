@@ -1,36 +1,477 @@
-.center-text {
-  position: fixed;
-  inset: 0;               // couvre tout le viewport
-  display: grid;
-  place-items: center;    // centre horizontal + vertical
-  text-align: center;
-  margin: 0;              // évite les décalages liés aux marges
+*  {
+  font-family: Roboto, serif;
 }
 
-.row {
-  padding: 0 50px 0 50px;
+$location-bg-color: #EAEAEA;
+$main-bg-color: #F6F6F6;
+$button-gradient: linear-gradient(#FF79DA, #9356DC);
+$main-color: #9356DC;
+$icons-color: #9a9996;
+$footer-bg-color: #353535;
+$new-bg-color: #99E2D0;
+$new-text-color: #008766;
+$secondary-color: #FF79DA;
+
+body {
+  max-width: 100%;
+  margin: 0;
+}
+
+//.loader {
+//  position: absolute;
+//  top: 0;
+//  left: 0;
+//  width: 100%;
+//  height: 100%;
+//  background-color: rgba(255, 255, 255, 1);
+//  display: flex;
+//  justify-content: center;
+//  align-items: center;
+//  z-index: 9999;
+//  animation: fadeOut 2s forwards;
+//
+//}
+//
+//.spinner {
+//  border: 8px solid $main-color;
+//  border-top: 8px solid $secondary-color;
+//  border-radius: 50%;
+//  width: 50px;
+//  height: 50px;
+//  animation: spin 1s linear infinite;
+//}
+//
+//@keyframes spin {
+//  0% {
+//    transform: rotate(0deg);
+//  }
+//  100% {
+//    transform: rotate(360deg);
+//  }
+//}
+//
+//@keyframes fadeOut {
+//  0% {
+//    opacity: 1;
+//  }
+//  99% {
+//    opacity: 1;
+//  }
+//  100% {
+//    opacity: 0;
+//    visibility: hidden;
+//  }
+//}
+//
+//.loader + .content {
+//  display: block;
+//}
+
+h2 {
+  font-size: 24px;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  row-gap: 25px;
-  column-gap: 25px;
+  height: 113px;
 }
 
-.column {
-  width: 20%;
-  min-width: 40%;
-  background-color: darkviolet;
-  text-align: center;
+.logo {
+  height: 63px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
-///* Optionnel: contour blanc quand rempli (lisible sur la couleur) */
-//.like__toggle:checked + .like__btn i {
-//  color: #fff;
-//}
+.logo span {
+  font-family: Shrikhand, serif;
+  font-weight: 400;
+  font-size: 30px;
+  position: relative;
+  top: 10px;
+  height: 44px;
+  width: 162px;
+}
 
-///* Focus clavier */
-//.like__toggle:focus-visible + .like__btn {
-//  outline: 2px solid $fill-color;
-//  outline-offset: 3px;
-//}
+.location {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
+  background-color: $location-bg-color;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.location_content {
+  display: flex;
+  position: relative;
+  top: 15px;
+  gap: 17px;
+}
+
+.explor {
+  display: flex;
+  flex-direction: column;
+  height: 287px;
+  background-color: $main-bg-color;
+  h2 {
+    position: absolute;
+    top: 152px;
+    text-align: center;
+    margin: 0;
+    width: 65%;
+    height: 68px;
+  }
+  span {
+    font-size: 18px;
+    font-weight: 300;
+    position: absolute;
+    top: 220px;
+    text-align: center;
+    height: 46px;
+    width: 90%;
+  }
+}
+
+.title_explor {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+}
+
+.btn-explor {
+  position: relative;
+  top: 180px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  button {
+    width: 218px;
+    height: 50px;
+    border-radius: 25px;
+    background: $button-gradient;
+    color: white;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  }
+  :hover {
+    opacity: 0.8;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.50);
+  }
+}
+
+.fonctions {
+  height: 440px;
+  position: relative;
+  top: 80px;
+  h2 {
+    position: relative;
+    top: -30px;
+    width: 275px;
+    height: 31px;
+    left: 20px;
+    margin: 0;
+  }
+  button {
+    width: 95%;
+    height: 72.36px;
+    border-radius: 20px;
+    border: none;
+    background: $main-bg-color;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    font-size: 16px;
+    font-weight: 500;
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+  }
+
+}
+
+.btn-fonctions {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 30px;
+}
+
+.btn-custom {
+  display: flex;
+  align-items: baseline;
+  position: relative;
+  span {
+    background: $main-color;
+    border-radius: 24px;
+    width: 24px;
+    line-height: 24px;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    position: absolute;
+    top: 35%;
+    left: -11px;
+  }
+  .fa-mobile-screen-button {
+    color: $icons-color;
+  }
+  .fa-list-ul {
+    color: $icons-color;
+  }
+  .fa-store {
+    color: $icons-color;
+  }
+}
+
+.restaurants {
+  background: $main-bg-color;
+  height: 1206px;
+  padding-top: 20px;
+  h2 {
+    font-weight: 700;
+    padding-left: 20px;
+  }
+}
+
+.restaurants-cards {
+  width: calc(100% - 34px);
+  height: 1058px;
+  padding-left: 17px;
+  padding-right: 17px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.restaurant-name {
+  background: white;
+  border-radius: 15px;
+  height: 251px;
+}
+
+.plate-img {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: -57px;
+  border-radius: 15px;
+  img {
+    margin: -57px 0 0 0;
+    width: 100%;
+    height: 90%;
+  }
+}
+
+.new {
+  display: flex;
+  position: relative;
+  top: -165px;
+  left: 248px;
+  width: 80px;
+  span {
+    background: $new-bg-color;
+    width: 80px;
+    height: 29px;
+    align-content: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: $new-text-color;
+    text-align: center;
+    border-radius: 2px;
+  }
+}
+
+.restaurant-details {
+  color: black;
+  padding-left: 20px;
+  position: relative;
+  top: -10px;
+  h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 3px 0;
+  }
+  span {
+    font-size: 17px;
+    font-weight: 300;
+  }
+  button {
+    background: none;
+    border: none;
+  }
+}
+
+.like {
+  display: flex;
+  justify-content: end;
+  position: absolute;
+  top: -5px;
+  right: 15px;
+}
+
+.like__toggle {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.like__btn {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  i {
+    position: relative;
+    z-index: 1;
+    transition: color .15s ease, transform .15s ease;
+  }
+}
+
+.like__btn::after {
+  content: "\f004";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 2em;
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: $button-gradient;
+  background-clip: text;
+  color: transparent;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity .15s ease, transform .15s ease;
+}
+
+.like__btn:active i {
+  transform: scale(.95);
+}
+
+.like__toggle:checked + .like__btn::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+footer {
+  height: 186px;
+  background: $footer-bg-color;
+  color: white;
+  h2 {
+    font-family: Shrikhand, serif;
+    font-weight: 400;
+    font-size: 18px;
+    margin: 0;
+    position: relative;
+    top: 20px;
+    left: 20px;
+  }
+  h3 {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+    position: relative;
+    top: 35px;
+    left: 40px;
+  }
+  ul {
+    margin: 0;
+    position: relative;
+    top: 35px;
+    list-style: none;
+    padding: 0;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  span {
+    font-size: 16px;
+    font-weight: 400;
+  }
+  i {
+    color: white;
+    position: relative;
+    top: 22px;
+    left: 20px;
+  }
+
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+@media (min-width: 1040px) {
+
+  header {
+    height: 146px;
+  }
+
+  .logo {
+    height: 96px;
+  }
+
+  .logo span {
+    top: 30px;
+  }
+
+  .explor {
+    h2 {
+      font-size: 40px;
+      font-weight: 700;
+      top: 176px;
+    }
+    span {
+      top: 255px;
+    }
+  }
+
+  .fonctions {
+    height: 228px;
+    padding-left: 150px;
+    button {
+      width: 335px;
+    }
+  }
+
+  .btn-fonctions {
+    flex-direction: row;
+  }
+
+  .restaurants {
+    padding: 0 180px 0 180px;
+    height: 665px;
+    background-color: #23162C;
+  }
+
+  .restaurants-cards {
+    gap: 50px;
+    width: calc(100% - 180px);
+    align-items: center;
+    height: 608px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}

@@ -265,12 +265,15 @@ header {
 }
 
 .plate-img {
+  position: relative;
+  display: inline-block;
   height: 100%;
   width: 100%;
   overflow: hidden;
   margin-bottom: -57px;
   border-radius: 15px;
   img {
+    display: block;
     margin: -57px 0 0 0;
     width: 100%;
     height: 90%;
@@ -279,9 +282,9 @@ header {
 
 .new {
   display: flex;
-  position: relative;
-  top: -165px;
-  left: 248px;
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
   width: 80px;
    span {
     background: $new-bg-color;
@@ -458,20 +461,28 @@ footer {
 
   .btn-fonctions {
     flex-direction: row;
+    gap: 30px;
   }
 
   .restaurants {
     padding: 0 180px 0 180px;
     height: 664px;
+    display: flex;
+    flex-direction: column;
+      h2 {
+        margin-bottom: 0;
+      }
   }
 
     .restaurants-cards {
-      gap: 50px;
-      width: calc(100% - 180px);
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      width: 100%;
       align-items: center;
       height: 608px;
-      flex-direction: row;
-      flex-wrap: wrap;
+      row-gap: 0;
+      column-gap: 100px;
     }
 
 }
