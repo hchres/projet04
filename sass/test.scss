@@ -97,8 +97,7 @@ header {
   font-size: 30px;
   position: relative;
   top: 10px;
-  height: 44px;
-  width: 162px;
+  text-align: center;
 }
 
 .location {
@@ -265,23 +264,27 @@ header {
 }
 
 .plate-img {
+  position: relative;
+  display: inline-block;
   height: 100%;
   width: 100%;
   overflow: hidden;
   margin-bottom: -57px;
   border-radius: 15px;
   img {
+    display: block;
     margin: -57px 0 0 0;
     width: 100%;
     height: 90%;
+    object-fit: cover;
   }
 }
 
 .new {
   display: flex;
-  position: relative;
-  top: -165px;
-  left: 248px;
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
   width: 80px;
   span {
     background: $new-bg-color;
@@ -315,7 +318,9 @@ header {
     border: none;
   }
 }
-
+body {
+  background: green;
+}
 .like {
   display: flex;
   justify-content: end;
@@ -342,7 +347,7 @@ header {
   i {
     position: relative;
     z-index: 1;
-    transition: color .15s ease, transform .15s ease;
+    transition: opacity .35s ease, color .15s ease, transform .15s ease;
   }
 }
 
@@ -358,22 +363,30 @@ header {
   background: $button-gradient;
   background-clip: text;
   color: transparent;
+
+  //opacity: 0;
+  //transform: scale(0);
+  //transition: opacity .15s ease, transform .15s ease;
   opacity: 0;
-  transform: scale(0);
-  transition: opacity .15s ease, transform .15s ease;
+  transform: scale(0.1);
+  transition: opacity .90s ease, transform .35s ease; /* + long */
 }
 
-.like__btn:active i {
-  transform: scale(.95);
+/* CHECKED: on "enlève la bordure" et on remplit progressivement */
+.like__toggle:checked + .like__btn i {
+  opacity: 0; /* la bordure disparaît après le clic */
 }
-
 .like__toggle:checked + .like__btn::after {
   opacity: 1;
   transform: scale(1);
 }
 
 footer {
-  height: 186px;
+  display: flex;
+  flex-direction: column;
+  padding: 22px 25px;
+  gap: 16px;
+  height: 142px;
   background: $footer-bg-color;
   color: white;
   h2 {
@@ -381,46 +394,31 @@ footer {
     font-weight: 400;
     font-size: 18px;
     margin: 0;
-    position: relative;
-    top: 20px;
-    left: 20px;
   }
-  h3 {
-    font-size: 16px;
-    font-weight: 500;
-    margin: 0;
-    position: relative;
-    top: 35px;
-    left: 40px;
-  }
-  ul {
-    margin: 0;
-    position: relative;
-    top: 35px;
-    list-style: none;
-    padding: 0;
-    left: 20px;
+
+  .info {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 16px;
+    h3 {
+      font-size: 16px;
+      font-weight: 500;
+      margin: 0;
+    }
+    span {
+      font-size: 16px;
+      font-weight: 400;
+    }
+    i {
+      color: white;
+    }
   }
-  span {
-    font-size: 16px;
-    font-weight: 400;
-  }
-  i {
-    color: white;
-    position: relative;
-    top: 22px;
-    left: 20px;
-  }
-
 }
 
-.info {
+.info-item {
   display: flex;
-  flex-direction: column;
-  gap: 4px;
+  align-items: baseline;
+  gap: 7px;
 }
 
 @media (min-width: 1040px) {
@@ -434,7 +432,8 @@ footer {
   }
 
   .logo span {
-    top: 30px;
+    top: 20px;
+    font-size: 40px;
   }
 
   .explor {
@@ -450,7 +449,7 @@ footer {
 
   .fonctions {
     height: 228px;
-    padding-left: 150px;
+    padding-left: 180px;
     button {
       width: 335px;
     }
@@ -458,20 +457,38 @@ footer {
 
   .btn-fonctions {
     flex-direction: row;
+    gap: 30px;
   }
 
   .restaurants {
     padding: 0 180px 0 180px;
-    height: 665px;
-    background-color: #23162C;
+    height: 664px;
+    display: flex;
+    flex-direction: column;
+    h2 {
+      margin-bottom: 0;
+    }
   }
 
   .restaurants-cards {
-    gap: 50px;
-    width: calc(100% - 180px);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    width: 100%;
     align-items: center;
     height: 608px;
+    row-gap: 0;
+    column-gap: 100px;
+  }
+
+}
+
+footer {
+  flex-direction: row-reverse;
+  align-items: end;
+  padding: 30px 25px;
+  height: 54px;
+  .info {
     flex-direction: row;
-    flex-wrap: wrap;
   }
 }
