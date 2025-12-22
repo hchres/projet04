@@ -376,14 +376,18 @@ footer .info i {
     top: 255px;
   }
   .fonctions {
-    height: 228px;
-    padding-left: 180px;
+    height: 128px;
+    display: flex;
+    gap: 25px;
+    position: unset;
+    padding: 50px 180px;
   }
   .fonctions button {
-    width: 335px;
+    width: 322px;
   }
   .btn-fonctions {
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 30px;
   }
   .restaurants {
