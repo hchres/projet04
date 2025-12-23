@@ -356,7 +356,7 @@ footer .info i {
   width: 190px;
 }
 
-@media (min-width: 1040px) {
+@media (min-width: 1440px) {
   header {
     height: 146px;
   }
@@ -381,6 +381,12 @@ footer .info i {
     gap: 25px;
     position: unset;
     padding: 50px 180px;
+    flex-direction: column;
+  }
+  .fonctions h2 {
+    position: unset;
+    top: 0;
+    left: 0;
   }
   .fonctions button {
     width: 322px;
@@ -389,6 +395,7 @@ footer .info i {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 30px;
+    padding-left: 10px;
   }
   .restaurants {
     padding: 0 180px 0 180px;
@@ -398,6 +405,7 @@ footer .info i {
   }
   .restaurants h2 {
     margin-bottom: 0;
+    padding: 0;
   }
   .restaurants-cards {
     display: grid;
@@ -408,6 +416,7 @@ footer .info i {
     height: 608px;
     row-gap: 0;
     column-gap: 100px;
+    padding: 0;
   }
   footer {
     flex-direction: row-reverse;
@@ -418,6 +427,73 @@ footer .info i {
   footer .info {
     flex-direction: row;
   }
+}
+.restaurant-page {
+  height: 63px;
+}
+
+.restaurants-image img {
+  width: 100%;
+  height: 275px;
+}
+
+.arrow {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 17px;
+  left: 17px;
+  background: none;
+  border: none;
+}
+
+.menu {
+  background: #F6F6F6;
+  width: 100%;
+  height: 1307px;
+  border-radius: 55px;
+  position: absolute;
+  top: 283px;
+}
+.menu h1 {
+  font-family: Shrikhand, serif;
+  font-weight: 400;
+  font-size: 28px;
+  position: absolute;
+  top: 8px;
+  left: 17px;
+  margin: 0;
+}
+.menu .menu-content {
+  width: 100%;
+  height: 1275px;
+  position: fixed;
+  top: 315px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.menu .menu-title {
+  display: flex;
+  width: 341px;
+  height: 29px;
+}
+.menu .menu-title .menu-like {
+  position: absolute;
+  top: 8px;
+  left: 300px;
+}
+
+.starter {
+  width: 349px;
+  height: 270px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.starter span {
+  width: 275px;
+  height: 27px;
 }
 
 /*# sourceMappingURL=style.css.map */
