@@ -11,145 +11,132 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
           integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
           crossorigin="anonymous" referrerpolicy="no-referrer">
-    <title>ohmyfood</title>
+    <title>La palette du goût</title>
 </head>
-
 <body>
-<div class="loader">
-    <div class="spinner"></div>
+<header class="restaurant-page">
+    <div class="logo">
+        <a href="http://localhost:63342/src/index.html?_ijt=f74dj6aa96382btrk1e1k5jcka&_ij_reload=RELOAD_ON_SAVE" target="_blank">
+            <button class="arrow"><i class="fa-solid fa-arrow-left fa-xl"></i></button>
+        </a>
+        <span>ohmyfood</span>
+    </div>
+</header>
+<div class="restaurants-image">
+    <img src="assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="salade-saumon">
 </div>
-<div class="content">
-    <header>
-        <div class="logo">
-            <span>ohmyfood</span>
-        </div>
-        <div class="location">
-            <div class="location_content">
-                <i class="fa-solid fa-location-dot fa-s"></i>
-                <span>Paris, Belleville</span>
+<main class="menu">
+    <div class="menu-content">
+        <div class="menu-title">
+            <h1>La palette du goût</h1>
+            <div class="menu-like">
+                <input class="like__toggle" type="checkbox" id="like1">
+                <label class="like__btn" for="like1">
+                    <i class="fa-regular fa-heart fa-2xl"></i>
+                </label>
             </div>
         </div>
-    </header>
-    <section class="explor">
-        <div class="title_explor">
-            <h2>Réservez le menu qui vous convient</h2>
-            <span>Découvrez des restaurants d'exception, sélectionnés par nos soins.</span>
-        </div>
-        <div class="btn-explor">
-            <button>Explorez nos restaurants</button>
-        </div>
-    </section>
-    <section class="fonctions">
-        <h2>Fonctionnement</h2>
-        <div class="btn-fonctions">
-            <div class="btn-custom">
-                <span>1</span>
-                <button><i class="fa-solid fa-mobile-screen-button fa-xl"></i>Choisissez votre restaurant</button>
+        <div class="dishes">
+            <span class="dish-title">ENTREES</span>
+            <div class="btn-dishes">
+                <button class="dish-btn">
+                    <div class="dish">
+                        <h2>Fricassée d'éscargot</h2>Au piment d'Espelette
+                    </div>
+                    <span class="price">25€</span>
+                </button>
             </div>
-            <div class="btn-custom">
-                <span>2</span>
-                <button><i class="fa-solid fa-list-ul fa-l"></i>Composez votre menu</button>
+            <div class="btn-dishes">
+                <button>
+                    <div class="dish">
+                        <h2>Foie gras de canard mi-cuit</h2>Et ses copeaux de truffe noire
+                    </div>
+                    <span class="price">35€</span>
+                </button>
             </div>
-            <div class="btn-custom">
-                <span>3</span>
-                <button><i class="fa-solid fa-store fa-l"></i>Dégustez au restaurant</button>
+            <div class="btn-dishes">
+                <button>
+                    <div class="dish">
+                        <h2>Oeuf au plat</h2>Assaisonné à la truffe sur lit de caviar
+                    </div>
+                    <span class="price">20€</span>
+                </button>
             </div>
         </div>
-    </section>
-    <section class="restaurants">
-        <h2>Restaurants</h2>
-        <div class="restaurants-cards">
-            <a href="la-palette-du-gout.html" target="_blank">
-                <article class="restaurant-name">
-                    <div class="plate-img">
-                        <img src="assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="salade-saumon">
-                        <div class="new">
-                            <span>Nouveau</span>
-                        </div>
+        <div class="dishes">
+            <span class="dish-title">PLATS</span>
+            <div class="btn-dishes">
+                <button>
+                    <div class="dish">
+                        <h2>Filets de boeuf aux herbes</h2>Accompagné de sa ribambelle de légumes
                     </div>
-                    <div class="restaurant-details">
-                        <h3>La palette du goût</h3>
-                        <span>Ménilmontant</span>
-                        <div class="like">
-                            <input class="like__toggle" type="checkbox" id="like1">
-                            <label class="like__btn" for="like1">
-                                <i class="fa-regular fa-heart fa-2xl"></i>
-                            </label>
-                        </div>
+                    <span class="price">40€</span>
+                </button>
+            </div>
+            <div class="btn-dishes">
+                <button>
+                    <div class="dish">
+                        <h2>Parmentier de queue de boeuf</h2>A la truffe et sa purée de panais
                     </div>
-                </article>
-            </a>
-            <a href="la-note-enchantee.html"target="_blank" >
-                <article class="restaurant-name">
-                    <div class="plate-img">
-                        <img src="assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="croquettes-pannees">
-                        <div class="new">
-                            <span>Nouveau</span>
-                        </div>
+                    <span class="price">35€</span>
+                </button>
+            </div>
+            <div class="btn-dishes">
+                <button>
+                    <div class="dish">
+                        <h2>Filet de turbo</h2>Aux agrumes
                     </div>
-                    <div class="restaurant-details">
-                        <h3>La note enchantée</h3>
-                        <span>Charonne</span>
-                        <div class="like">
-                            <input class="like__toggle" type="checkbox" id="like2">
-                            <label class="like__btn" for="like2">
-                                <i class="fa-regular fa-heart fa-2xl"></i>
-                            </label>
-                        </div>
-                    </div>
-                </article>
-            </a>
-            <a href="a-la-francaise.html" target="_blank">
-                <article class="restaurant-name">
-                    <div class="plate-img">
-                        <img src="assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="oeufs-poches">
-                    </div>
-                    <div class="restaurant-details">
-                        <h3>A la française</h3>
-                        <span>Cité Rouge</span>
-                        <div class="like">
-                            <input class="like__toggle" type="checkbox" id="like3">
-                            <label class="like__btn" for="like3">
-                                <i class="fa-regular fa-heart fa-2xl"></i>
-                            </label>
-                        </div>
-                    </div>
-                </article>
-            </a>
-            <a href="le-delice-des-sens.html" target="_blank">
-                <article class="restaurant-name">
-                    <div class="plate-img">
-                        <img src="assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="filet-poisson">
-                    </div>
-                    <div class="restaurant-details">
-                        <h3>Le délice des sens</h3>
-                        <span>Folie-Méricourt</span>
-                        <div class="like">
-                            <input class="like__toggle" type="checkbox" id="like4">
-                            <label class="like__btn" for="like4">
-                                <i class="fa-regular fa-heart fa-2xl"></i>
-                            </label>
-                        </div>
-                    </div>
-                </article>
-            </a>
+                    <span class="price">44€</span>
+                </button>
+            </div>
         </div>
-    </section>
-    <footer>
-        <h2>ohmyfood</h2>
-        <div class="info">
-            <h3>Proposer un restaurant</h3><i class="fa-solid fa-utensils fa-xs"></i>
-            <h3>Devenir partenaire</h3><i class="fa-solid fa-handshake fa-xs"></i>
-            <ul>
-                <li>
+        <div class="dishes">
+            <span class="dish-title">DESSERTS</span>
+            <div class="btn-dishes">
+                <button>
+                    <div class="dish">
+                        <h2>Paris-Brest</h2>Revisité
+                    </div>
+                    <span class="price">18€</span>
+                </button>
+            </div>
+            <div class="btn-dishes">
+                <button>
+                    <div class="dish">
+                        <h2>Macaron au chocolat d'exception</h2>Et glace à la vanille de Madagascar
+                    </div>
+                    <span class="price">22€</span>
+                </button>
+            </div>
+            <div class="btn-dishes">
+                <button>
+                    <div class="dish">
+                        <h2>Mousse au chocolat</h2>Au piment d'Espelette et à la truffe noire
+                    </div>
+                    <span class="price">23€</span>
+                </button>
+            </div>
+        </div>
+        <div class="btn-order">
+            <button>Commander</button>
+        </div>
+        <footer>
+            <div class="footer-content">
+                <h2>ohmyfood</h2>
+                <div class="info">
+                    <div class="info-item">
+                        <i class="fa-solid fa-utensils fa-xs"></i><h3>Proposer un restaurant</h3>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-handshake fa-xs"></i><h3>Devenir partenaire</h3>
+                    </div>
                     <span>Mentions légales</span>
-                </li>
-                <li>
                     <span>Contact</span>
-                </li>
-            </ul>
-        </div>
-    </footer>
-</div>
+                </div>
+            </div>
+
+        </footer>
+    </div>
+
+</main>
 </body>
-</html>

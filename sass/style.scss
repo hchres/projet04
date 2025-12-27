@@ -8,7 +8,7 @@
   $main-color: #9356DC;
   $icons-color: #9a9996;
   $footer-bg-color: #353535;
-  $new-bg-color: #99E2D0;
+  $tertiary-color: #99E2D0;
   $new-text-color: #008766;
   $secondary-color: #FF79DA;
 
@@ -287,7 +287,7 @@ header {
   right: 1.5rem;
   width: 80px;
    span {
-    background: $new-bg-color;
+    background: $tertiary-color;
     width: 80px;
     height: 29px;
     align-content: center;
@@ -375,7 +375,7 @@ header {
   transform: scale(1);
 }
 
-footer {
+.footer-content {
   display: flex;
   flex-direction: column;
   padding: 22px 25px;
@@ -383,7 +383,6 @@ footer {
   height: 142px;
   background: $footer-bg-color;
   color: white;
-
   h2 {
     font-family: Shrikhand, serif;
     font-weight: 400;
@@ -391,7 +390,6 @@ footer {
     margin: 0;
     width: 139px;
   }
-
   .info {
     display: flex;
     flex-direction: column;
@@ -410,6 +408,10 @@ footer {
       color: white;
     }
   }
+}
+
+footer {
+  width: 100%;
 }
 
 .info-item {
@@ -494,11 +496,11 @@ footer {
       column-gap: 100px;
       padding: 0;
     }
-    footer {
-    flex-direction: row-reverse;
-    align-items: end;
-    padding: 30px 25px;
-    height: 54px;
+    .footer-content {
+      flex-direction: row-reverse;
+      align-items: end;
+      padding: 30px 25px;
+      height: 54px;
 
       .info {
         flex-direction: row;
@@ -571,10 +573,21 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 12px;
-
-  span {
+  .dish-title {
     width: 275px;
     height: 27px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 12px;
+  }
+  .dish-title::after {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 0;
+    top: 27px;
+    left: 0;
+    border-bottom: 3px solid $tertiary-color;
   }
 }
 
@@ -591,7 +604,7 @@ footer {
       border: none;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
     }
-    .plate {
+    .dish {
       width: 287px;
       height: 42px;
       gap: 5px;
@@ -612,6 +625,7 @@ footer {
       font-weight: 700;
       font-size: 15px;
       padding-top: 25px;
+      text-decoration: none;
     }
 }
 

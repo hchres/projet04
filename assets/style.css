@@ -314,7 +314,7 @@ header {
   transform: scale(1);
 }
 
-footer {
+.footer-content {
   display: flex;
   flex-direction: column;
   padding: 22px 25px;
@@ -323,30 +323,34 @@ footer {
   background: #353535;
   color: white;
 }
-footer h2 {
+.footer-content h2 {
   font-family: Shrikhand, serif;
   font-weight: 400;
   font-size: 18px;
   margin: 0;
   width: 139px;
 }
-footer .info {
+.footer-content .info {
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
-footer .info h3 {
+.footer-content .info h3 {
   font-size: 16px;
   font-weight: 500;
   margin: 0;
 }
-footer .info span {
+.footer-content .info span {
   font-size: 16px;
   font-weight: 400;
   width: 130px;
 }
-footer .info i {
+.footer-content .info i {
   color: white;
+}
+
+footer {
+  width: 100%;
 }
 
 .info-item {
@@ -418,13 +422,13 @@ footer .info i {
     column-gap: 100px;
     padding: 0;
   }
-  footer {
+  .footer-content {
     flex-direction: row-reverse;
     align-items: end;
     padding: 30px 25px;
     height: 54px;
   }
-  footer .info {
+  .footer-content .info {
     flex-direction: row;
   }
 }
@@ -492,9 +496,21 @@ footer .info i {
   flex-direction: column;
   gap: 12px;
 }
-.dishes span {
+.dishes .dish-title {
   width: 275px;
   height: 27px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 12px;
+}
+.dishes .dish-title::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 0;
+  top: 27px;
+  left: 0;
+  border-bottom: 3px solid #99E2D0;
 }
 
 .btn-dishes {
@@ -511,7 +527,7 @@ footer .info i {
   border: none;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
-.btn-dishes .plate {
+.btn-dishes .dish {
   width: 287px;
   height: 42px;
   gap: 5px;
@@ -532,6 +548,7 @@ footer .info i {
   font-weight: 700;
   font-size: 15px;
   padding-top: 25px;
+  text-decoration: none;
 }
 
 .btn-order {
