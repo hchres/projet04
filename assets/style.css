@@ -489,21 +489,21 @@ footer {
   left: 300px;
 }
 
-.dishes {
+.dishes-content {
   width: 349px;
   height: 270px;
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
-.dishes .dish-title {
+.dishes-content .dishes-category {
   width: 275px;
   height: 27px;
   position: relative;
   display: inline-block;
   padding-bottom: 12px;
 }
-.dishes .dish-title::after {
+.dishes-content .dishes-category::after {
   content: "";
   position: absolute;
   width: 40px;
@@ -513,11 +513,11 @@ footer {
   border-bottom: 3px solid #99E2D0;
 }
 
-.btn-dishes {
+.dish-content {
   width: 349px;
   height: 72px;
 }
-.btn-dishes button {
+.dish-content button {
   display: flex;
   width: 100%;
   height: 100%;
@@ -527,7 +527,7 @@ footer {
   border: none;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
-.btn-dishes .dish {
+.dish-content .dish {
   width: 287px;
   height: 42px;
   gap: 5px;
@@ -535,12 +535,12 @@ footer {
   flex-direction: column;
   align-items: start;
 }
-.btn-dishes h2 {
+.dish-content h2 {
   font-weight: 500;
   font-size: 18px;
   margin: 0;
 }
-.btn-dishes .price {
+.dish-content .price {
   display: flex;
   flex-direction: row-reverse;
   width: 27px;
