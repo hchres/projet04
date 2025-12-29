@@ -597,14 +597,14 @@ footer {
 $rect-w: 59px;
 $rect-h: 73px;
 
-.dish-toggle{
+.dish-toggle {
   position: absolute;
   opacity: 0;
   width: 1px;
   height: 1px;
 }
 
-.dish-btn{
+.dish-btn {
   position: relative;
   overflow: hidden;
   display: flex;
@@ -616,13 +616,11 @@ $rect-h: 73px;
   cursor: pointer;
   padding: 15px;
   .price{
-    //position: relative;
-    //z-index: 1;
     transition: transform .25s ease;
   }
 }
 
-.dish-btn::after{
+.dish-btn::after {
   content: "";
   position: absolute;
   top: 0;
@@ -634,7 +632,7 @@ $rect-h: 73px;
   transition: transform .25s ease;
 }
 
-.dish-check{
+.dish-check {
   position: absolute;
   top: 0;
   right: 0;
@@ -649,16 +647,16 @@ $rect-h: 73px;
   color: white;
 }
 
-.dish-toggle:checked + .dish-btn::after{
+.dish-toggle:checked + .dish-btn::after {
   transform: translateX(0);
 }
 
-.dish-toggle:checked + .dish-btn .dish-check{
+.dish-toggle:checked + .dish-btn .dish-check {
   transform: translateX(0);
   opacity: 1;
 }
 
-.dish-toggle:checked + .dish-btn .price{
+.dish-toggle:checked + .dish-btn .price {
   transform: translateX(-$rect-w);
 }
 
