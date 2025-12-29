@@ -513,6 +513,69 @@ footer {
   border-bottom: 3px solid #99E2D0;
 }
 
+.dish-toggle {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.dish-btn {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border-radius: 12px;
+  background: #fff;
+  cursor: pointer;
+  padding: 15px;
+}
+.dish-btn .price {
+  transition: transform 0.25s ease;
+}
+
+.dish-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 59px;
+  height: 73px;
+  background: #99E2D0;
+  transform: translateX(100%);
+  transition: transform 0.25s ease;
+}
+
+.dish-check {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 59px;
+  height: 73px;
+  display: grid;
+  place-items: center;
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  z-index: 2;
+  color: white;
+}
+
+.dish-toggle:checked + .dish-btn::after {
+  transform: translateX(0);
+}
+
+.dish-toggle:checked + .dish-btn .dish-check {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.dish-toggle:checked + .dish-btn .price {
+  transform: translateX(-59px);
+}
+
 .dish-content {
   width: 349px;
   height: 72px;
@@ -538,6 +601,11 @@ footer {
 .dish-content h2 {
   font-weight: 500;
   font-size: 18px;
+  margin: 0;
+}
+.dish-content span {
+  font-weight: 300;
+  font-size: 15px;
   margin: 0;
 }
 .dish-content .price {
