@@ -619,6 +619,31 @@ footer {
   text-decoration: none;
 }
 
+@keyframes dishIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.dish-main-course, .dish-appetizer, .dish-dessert {
+  opacity: 0;
+  animation: dishIn 1300ms ease forwards;
+}
+
+.dish-appetizer {
+  animation-delay: 500ms;
+}
+
+.dish-main-course {
+  animation-delay: 1000ms;
+}
+
+.dish-dessert {
+  animation-delay: 1500ms;
+}
+
 .btn-order {
   display: flex;
   justify-content: center;
