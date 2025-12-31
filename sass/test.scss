@@ -766,8 +766,6 @@ $rect-h: 73px;
   }
 
   .restaurants-image {
-    position: relative;
-    top: 96px;
     img {
       object-fit: cover;
       height: 383px;
@@ -779,11 +777,25 @@ $rect-h: 73px;
   }
 
   .menu {
-    background: green;
+    background: rebeccapurple;
     width: 1055px;
     height: 1221px;
-    position: relative;
+    position: absolute;
     top: 439px;
     left: 193px;
+    display: flex;
+    .menu-content {
+      width: 100%;
+      height: 1275px;
+      position: relative;
+      top: 51px;
+    }
+    .menu-title {
+      position: relative;
+      left: 27px;
+    }
+  }
+  .dishes-content {
+    width: calc(100% - 421px);
   }
 }
