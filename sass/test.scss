@@ -13,6 +13,10 @@ $new-text-color: #008766;
 $secondary-color: #FF79DA;
 
 body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
   max-width: 100%;
   margin: 0;
   background-color: green;
@@ -425,13 +429,16 @@ footer {
 //Menu des restaurants
 
 .restaurant-page {
+  width: 100%;
   height: 63px;
 }
 
 .restaurants-image {
+  width: 100%;
   img {
     width: 100%;
     height: 275px;
+    object-fit: cover;
   }
 }
 
@@ -448,43 +455,38 @@ footer {
 .menu {
   background: green;
   width: 100%;
-  height: 1307px;
-  border-radius: 55px;
-  position: absolute;
-  top: 283px;
-  h1 {
-    font-family: Shrikhand, serif;
-    font-weight: 400;
-    font-size: 28px;
-    position: absolute;
-    top: 8px;
-    left: 17px;
-    margin: 0;
-  }
+  height: 1250px;
+  border-radius: 35px; // TODO
+  margin-top: -40px;
   .menu-content {
     width: 100%;
     height: 1275px;
-    position: fixed;
-    top: 315px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 40px;
+    gap: 60px;
   }
   .menu-title {
     display: flex;
-    width: 341px;
+    width: 95%;
     height: 29px;
+    margin-top: 40px;
+    justify-content: space-between;
+    // TODO mettre relative et laisser
+    h1 {
+      font-family: Shrikhand, serif;
+      font-weight: 400;
+      font-size: 28px;
+      margin: 0;
+    }
     .menu-like {
-      position: absolute;
-      top: 8px;
-      left: 300px;
+      margin-right: 25px;
     }
   }
 }
 
 .dishes-content {
-  width: calc(100% - 59px);
+  width: calc(100% - 20px);
   height: 270px;
   display: flex;
   flex-direction: column;
@@ -639,6 +641,7 @@ $rect-h: 73px;
   display: flex;
   justify-content: center;
   width: 100%;
+  margin-top: 15px;
   button {
     width: 186px;
     height: 50px;
@@ -684,12 +687,11 @@ $rect-h: 73px;
 
   .logo {
     height: 96px;
-  }
-
-  .logo span {
-    top: 20px;
-    font-size: 40px;
-    height: 34px;
+     span {
+       top: 20px;
+       font-size: 40px;
+       height: 34px;
+     }
   }
 
   .explor {
@@ -761,14 +763,19 @@ $rect-h: 73px;
     }
   }
 
+//Menu des restaurants
+
   .restaurant-page {
     height: 96px;
+    width: 100%;
   }
 
   .restaurants-image {
+    //width: 100%;
     img {
-      object-fit: cover;
+      //object-fit: cover;
       height: 383px;
+      //width: 100%;
     }
   }
 
@@ -780,22 +787,32 @@ $rect-h: 73px;
     background: rebeccapurple;
     width: 1055px;
     height: 1221px;
-    position: absolute;
-    top: 439px;
-    left: 193px;
     display: flex;
+    border-radius: 35px 35px 0 0;
+    //position: unset;
+    //margin-top: -40px;
     .menu-content {
       width: 100%;
       height: 1275px;
-      position: relative;
-      top: 51px;
+      //position: relative;
+      //top: 51px;
     }
     .menu-title {
-      position: relative;
-      left: 27px;
+      //position: relative;
+      //left: 27px;
+      justify-content: center;
+      h1 {
+        margin-right: 20px;
+      }
+      .menu-like {
+        margin-right: 0;
+      }
     }
   }
   .dishes-content {
     width: calc(100% - 421px);
+  }
+  .btn-order {
+    margin-top: 0;
   }
 }
