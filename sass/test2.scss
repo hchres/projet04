@@ -126,6 +126,7 @@ header {
   flex-direction: column;
   height: 287px;
   background-color: $main-bg-color;
+
   h2 {
     position: absolute;
     top: 152px;
@@ -134,6 +135,7 @@ header {
     width: 65%;
     height: 68px;
   }
+
   span {
     font-size: 18px;
     font-weight: 300;
@@ -159,6 +161,7 @@ header {
   display: flex;
   justify-content: center;
   width: 100%;
+
   button {
     width: 218px;
     height: 50px;
@@ -171,6 +174,7 @@ header {
     padding: 0;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
   }
+
   :hover {
     opacity: 0.8;
     color: white;
@@ -182,6 +186,7 @@ header {
   height: 440px;
   position: relative;
   top: 80px;
+
   h2 {
     position: relative;
     top: -30px;
@@ -190,6 +195,7 @@ header {
     left: 20px;
     margin: 0;
   }
+
   button {
     width: 95%;
     height: 72.36px;
@@ -218,6 +224,7 @@ header {
   display: flex;
   align-items: baseline;
   position: relative;
+
   span {
     background: $main-color;
     border-radius: 24px;
@@ -246,6 +253,7 @@ header {
   background: $main-bg-color;
   height: 1206px;
   padding-top: 20px;
+
   h2 {
     font-weight: 700;
     padding-left: 20px;
@@ -276,6 +284,7 @@ header {
   overflow: hidden;
   margin-bottom: -57px;
   border-radius: 15px;
+
   img {
     display: block;
     margin: -57px 0 0 0;
@@ -291,6 +300,7 @@ header {
   top: 1rem;
   right: 1.5rem;
   width: 80px;
+
   span {
     background: $tertiary-color;
     width: 80px;
@@ -309,15 +319,18 @@ header {
   padding-left: 20px;
   position: relative;
   top: -10px;
+
   h3 {
     font-size: 18px;
     font-weight: 700;
     margin: 0 0 3px 0;
   }
+
   span {
     font-size: 17px;
     font-weight: 300;
   }
+
   button {
     background: none;
     border: none;
@@ -347,6 +360,7 @@ header {
   cursor: pointer;
   position: relative;
   overflow: hidden;
+
   i {
     position: relative;
     z-index: 1;
@@ -388,6 +402,7 @@ header {
   height: 142px;
   background: $footer-bg-color;
   color: white;
+
   h2 {
     font-family: Shrikhand, serif;
     font-weight: 400;
@@ -395,20 +410,24 @@ header {
     margin: 0;
     width: 139px;
   }
+
   .info {
     display: flex;
     flex-direction: column;
     gap: 4px;
+
     h3 {
       font-size: 16px;
       font-weight: 500;
       margin: 0;
     }
+
     span {
       font-size: 16px;
       font-weight: 400;
       width: 130px;
     }
+
     i {
       color: white;
     }
@@ -456,7 +475,7 @@ footer {
   background: green;
   width: 100%;
   height: 1250px;
-  border-radius: 35px; // TODO
+  border-radius: 35px;
   margin-top: -40px;
   .menu-content {
     width: 100%;
@@ -543,7 +562,7 @@ $rect-h: 100%;
   height: $rect-h;
   background: $tertiary-color;
   transform: translateX(100%);
-  transition: transform .25s ease;
+  transition: transform 250ms ease;
 }
 
 .dish-check {
@@ -556,7 +575,7 @@ $rect-h: 100%;
   place-items: center;
   transform: translateX(100%);
   opacity: 0;
-  transition: transform .25s ease, opacity .25s ease;
+  transition: transform 250ms ease, opacity 250ms ease;
   z-index: 1;
   color: white;
   pointer-events: none;
@@ -596,9 +615,8 @@ $rect-h: 100%;
     min-width: 0;
     width: 100%;
     gap: 5px;
-    box-sizing: border-box;
     padding-right: 0;
-    transition: padding-right .25s ease;
+    transition: padding-right 250ms ease;
 
     .dish-ellipsis {
       width: 100%;
@@ -614,15 +632,9 @@ $rect-h: 100%;
       font-size: 18px;
     }
 
-    .dish-sub {
+    .dish-desc {
       width: 100%;
       display: flex;
-      min-width: 0;
-    }
-
-    .dish-card .dish-ellipsis {
-      flex: 1 1 auto;
-      min-width: 0;
     }
   }
 
@@ -637,14 +649,14 @@ $rect-h: 100%;
     font-size: 15px;
     text-decoration: none;
     text-align: end;
-    transition: transform .25s ease;
+    transition: transform 250ms ease;
   }
 }
 
 .dish-hit {
   position: absolute;
   inset: 0;
-  z-index: 3;
+  z-index: 2;
   cursor: pointer;
   background: transparent;
 }
@@ -654,6 +666,7 @@ $rect-h: 100%;
   justify-content: center;
   width: 100%;
   margin-top: 15px;
+
   button {
     width: 186px;
     height: 50px;
@@ -666,6 +679,7 @@ $rect-h: 100%;
     padding: 0;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
   }
+
   :hover {
     opacity: 0.8;
     color: white;
@@ -705,6 +719,7 @@ $rect-h: 100%;
 
   .logo {
     height: 96px;
+
     span {
       top: 20px;
       font-size: 40px;
@@ -713,11 +728,13 @@ $rect-h: 100%;
   }
 
   .explor {
+
     h2 {
       font-size: 40px;
       font-weight: 700;
       top: 176px;
     }
+
     span {
       top: 255px;
     }
@@ -730,12 +747,14 @@ $rect-h: 100%;
     position: unset;
     padding: 50px 180px;
     flex-direction: column;
+
     h2 {
       position: unset;
       top: 0;
       left: 0;
 
     }
+
     button {
       width: 322px;
     }
@@ -753,6 +772,7 @@ $rect-h: 100%;
     height: 664px;
     display: flex;
     flex-direction: column;
+
     h2 {
       margin-bottom: 0;
       padding: 0;
@@ -776,6 +796,7 @@ $rect-h: 100%;
     align-items: end;
     padding: 30px 25px;
     height: 54px;
+
     .info {
       flex-direction: row;
     }

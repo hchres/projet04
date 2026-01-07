@@ -2,19 +2,24 @@
   font-family: Roboto, serif;
 }
 
-  $location-bg-color: #EAEAEA;
-  $main-bg-color: #F6F6F6;
-  $button-gradient: linear-gradient(#FF79DA, #9356DC);
-  $main-color: #9356DC;
-  $icons-color: #9a9996;
-  $footer-bg-color: #353535;
-  $tertiary-color: #99E2D0;
-  $new-text-color: #008766;
-  $secondary-color: #FF79DA;
+$location-bg-color: #EAEAEA;
+$main-bg-color: #F6F6F6;
+$button-gradient: linear-gradient(#FF79DA, #9356DC);
+$main-color: #9356DC;
+$icons-color: #9a9996;
+$footer-bg-color: #353535;
+$tertiary-color: #99E2D0;
+$new-text-color: #008766;
+$secondary-color: #FF79DA;
 
 body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
   max-width: 100%;
   margin: 0;
+  //background-color: $main-bg-color;
 }
 
 //.loader {
@@ -75,6 +80,10 @@ a {
   text-decoration: none;
 }
 
+.content {
+  width: 100%;
+}
+
 header {
   display: flex;
   flex-direction: column;
@@ -121,24 +130,26 @@ header {
   flex-direction: column;
   height: 287px;
   background-color: $main-bg-color;
-    h2 {
-      position: absolute;
-      top: 152px;
-      text-align: center;
-      margin: 0;
-      width: 65%;
-      height: 68px;
-      }
-    span {
-      font-size: 18px;
-      font-weight: 300;
-      position: absolute;
-      top: 220px;
-      text-align: center;
-      height: 46px;
-      width: 90%;
-    }
- }
+
+  h2 {
+    position: absolute;
+    top: 152px;
+    text-align: center;
+    margin: 0;
+    width: 65%;
+    height: 68px;
+  }
+
+  span {
+    font-size: 18px;
+    font-weight: 300;
+    position: absolute;
+    top: 220px;
+    text-align: center;
+    height: 46px;
+    width: 90%;
+  }
+}
 
 .title_explor {
   display: flex;
@@ -154,51 +165,55 @@ header {
   display: flex;
   justify-content: center;
   width: 100%;
-    button {
-      width: 218px;
-      height: 50px;
-      border-radius: 25px;
-      background: $button-gradient;
-      color: white;
-      border: none;
-      font-size: 16px;
-      font-weight: 500;
-      padding: 0;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-    }
-    :hover {
-      opacity: 0.8;
-      color: white;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.50);
-    }
+
+  button {
+    width: 218px;
+    height: 50px;
+    border-radius: 25px;
+    background: $button-gradient;
+    color: white;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  }
+
+  :hover {
+    opacity: 0.8;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.50);
+  }
 }
 
 .fonctions {
   height: 440px;
   position: relative;
   top: 80px;
-    h2 {
-      position: relative;
-      top: -30px;
-      width: 275px;
-      height: 31px;
-      left: 20px;
-      margin: 0;
-    }
-      button {
-        width: 95%;
-        height: 72.36px;
-        border-radius: 20px;
-        border: none;
-        background: $main-bg-color;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-        font-size: 16px;
-        font-weight: 500;
-        gap: 20px;
-        display: flex;
-        align-items: center;
-        padding-left: 40px;
-      }
+
+  h2 {
+    position: relative;
+    top: -30px;
+    width: 275px;
+    height: 31px;
+    left: 20px;
+    margin: 0;
+  }
+
+  button {
+    width: 95%;
+    height: 72.36px;
+    border-radius: 20px;
+    border: none;
+    background: $main-bg-color;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    font-size: 16px;
+    font-weight: 500;
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+  }
 
 }
 
@@ -213,6 +228,7 @@ header {
   display: flex;
   align-items: baseline;
   position: relative;
+
   span {
     background: $main-color;
     border-radius: 24px;
@@ -226,25 +242,26 @@ header {
     top: 35%;
     left: -11px;
   }
-    .fa-mobile-screen-button {
-      color: $icons-color;
-    }
-    .fa-list-ul {
-      color: $icons-color;
-    }
-    .fa-store {
-      color: $icons-color;
-    }
+  .fa-mobile-screen-button {
+    color: $icons-color;
+  }
+  .fa-list-ul {
+    color: $icons-color;
+  }
+  .fa-store {
+    color: $icons-color;
+  }
 }
 
 .restaurants {
   background: $main-bg-color;
   height: 1206px;
   padding-top: 20px;
-    h2 {
-      font-weight: 700;
-      padding-left: 20px;
-    }
+
+  h2 {
+    font-weight: 700;
+    padding-left: 20px;
+  }
 }
 
 .restaurants-cards {
@@ -271,6 +288,7 @@ header {
   overflow: hidden;
   margin-bottom: -57px;
   border-radius: 15px;
+
   img {
     display: block;
     margin: -57px 0 0 0;
@@ -286,7 +304,8 @@ header {
   top: 1rem;
   right: 1.5rem;
   width: 80px;
-   span {
+
+  span {
     background: $tertiary-color;
     width: 80px;
     height: 29px;
@@ -296,7 +315,7 @@ header {
     color: $new-text-color;
     text-align: center;
     border-radius: 2px;
-    }
+  }
 }
 
 .restaurant-details {
@@ -304,19 +323,22 @@ header {
   padding-left: 20px;
   position: relative;
   top: -10px;
-      h3 {
-        font-size: 18px;
-        font-weight: 700;
-        margin: 0 0 3px 0;
-      }
-      span {
-        font-size: 17px;
-        font-weight: 300;
-      }
-      button {
-        background: none;
-        border: none;
-      }
+
+  h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 3px 0;
+  }
+
+  span {
+    font-size: 17px;
+    font-weight: 300;
+  }
+
+  button {
+    background: none;
+    border: none;
+  }
 }
 
 .like {
@@ -342,11 +364,12 @@ header {
   cursor: pointer;
   position: relative;
   overflow: hidden;
-   i {
-     position: relative;
-     z-index: 1;
-     transition: opacity .35s ease, color .15s ease, transform .15s ease;
-   }
+
+  i {
+    position: relative;
+    z-index: 1;
+    transition: opacity .35s ease, color .15s ease, transform .15s ease;
+  }
 }
 
 .like__btn::after {
@@ -383,6 +406,7 @@ header {
   height: 142px;
   background: $footer-bg-color;
   color: white;
+
   h2 {
     font-family: Shrikhand, serif;
     font-weight: 400;
@@ -390,20 +414,24 @@ header {
     margin: 0;
     width: 139px;
   }
+
   .info {
     display: flex;
     flex-direction: column;
     gap: 4px;
+
     h3 {
       font-size: 16px;
       font-weight: 500;
       margin: 0;
     }
+
     span {
       font-size: 16px;
       font-weight: 400;
       width: 130px;
     }
+
     i {
       color: white;
     }
@@ -421,103 +449,19 @@ footer {
   width: 190px;
 }
 
-  @media (min-width: 1440px) {
-
-    header {
-      height: 146px;
-    }
-
-    .logo {
-      height: 96px;
-    }
-
-    .logo span {
-      top: 20px;
-      font-size: 40px;
-    }
-
-    .explor {
-      h2 {
-        font-size: 40px;
-        font-weight: 700;
-        top: 176px;
-      }
-
-      span {
-        top: 255px;
-      }
-    }
-
-    .fonctions {
-      height: 128px;
-      display: flex;
-      gap: 25px;
-      position: unset;
-      padding: 50px 180px;
-      flex-direction: column;
-        h2 {
-          position: unset;
-          top: 0;
-          left: 0;
-
-        }
-        button {
-          width: 322px;
-        }
-    }
-
-    .btn-fonctions {
-      flex-direction: row;
-      flex-wrap: wrap;
-      gap: 30px;
-      padding-left: 10px;
-    }
-
-    .restaurants {
-      padding: 0 180px 0 180px;
-      height: 664px;
-      display: flex;
-      flex-direction: column;
-
-      h2 {
-        margin-bottom: 0;
-        padding: 0;
-      }
-    }
-
-    .restaurants-cards {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(2, 1fr);
-      width: 100%;
-      align-items: center;
-      height: 608px;
-      row-gap: 0;
-      column-gap: 100px;
-      padding: 0;
-    }
-    .footer-content {
-      flex-direction: row-reverse;
-      align-items: end;
-      padding: 30px 25px;
-      height: 54px;
-
-      .info {
-        flex-direction: row;
-      }
-    }
-  }
-
 //Menu des restaurants
 
 .restaurant-page {
+  width: 100%;
   height: 63px;
 }
 
 .restaurants-image {
+  width: 100%;
   img {
     width: 100%;
     height: 275px;
+    object-fit: cover;
   }
 }
 
@@ -534,44 +478,38 @@ footer {
 .menu {
   background: $main-bg-color;
   width: 100%;
-  height: 1307px;
-  border-radius: 55px;
-  position: absolute;
-  top: 283px;
+  height: 1250px;
+  border-radius: 35px;
+  margin-top: -40px;
+  .menu-content {
+    width: 100%;
+    height: 1275px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+  }
+  .menu-title {
+    display: flex;
+    width: 95%;
+    height: 29px;
+    margin-top: 40px;
+    justify-content: space-between;
     h1 {
       font-family: Shrikhand, serif;
       font-weight: 400;
       font-size: 28px;
-      position: absolute;
-      top: 8px;
-      left: 17px;
       margin: 0;
     }
-    .menu-content {
-      width: 100%;
-      height: 1275px;
-      position: fixed;
-      top: 315px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 40px;
+    .menu-like {
+      margin-right: 25px;
     }
-    .menu-title {
-      display: flex;
-      width: 341px;
-      height: 29px;
-      .menu-like {
-        position: absolute;
-        top: 8px;
-        left: 300px;
-      }
-     }
+  }
 }
 
 .dishes-content {
-  width: 349px;
-  height: 270px;
+  width: calc(100% - 20px);
+  height: 100%;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -595,7 +533,7 @@ footer {
 
 // Dimenstions du rectangle pour l'animation
 $rect-w: 59px;
-$rect-h: 73px;
+$rect-h: 100%;
 
 .dish-toggle {
   position: absolute;
@@ -609,15 +547,14 @@ $rect-h: 73px;
   overflow: hidden;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 12px;
   border-radius: 12px;
   background: #fff;
   cursor: pointer;
   padding: 15px;
-  .price{
-    transition: transform .25s ease;
-  }
+  text-decoration: none;
+  color: inherit;
 }
 
 .dish-details::after {
@@ -629,7 +566,7 @@ $rect-h: 73px;
   height: $rect-h;
   background: $tertiary-color;
   transform: translateX(100%);
-  transition: transform .25s ease;
+  transition: transform 250ms ease;
 }
 
 .dish-check {
@@ -642,9 +579,10 @@ $rect-h: 73px;
   place-items: center;
   transform: translateX(100%);
   opacity: 0;
-  transition: transform .25s ease, opacity .25s ease;
-  z-index: 2;
+  transition: transform 250ms ease, opacity 250ms ease;
+  z-index: 1;
   color: white;
+  pointer-events: none;
 }
 
 .dish-toggle:checked + .dish-details::after {
@@ -656,13 +594,14 @@ $rect-h: 73px;
   opacity: 1;
 }
 
-.dish-toggle:checked + .dish-details .price {
-  transform: translateX(-$rect-w);
+.dish-toggle:checked + .dish-details .dish-card {
+  padding-right: $rect-w;
 }
 
 .dish-content {
-  width: 349px;
+  width: 100%;
   height: 72px;
+
   button {
     display: flex;
     width: 100%;
@@ -673,33 +612,82 @@ $rect-h: 73px;
     border: none;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
   }
+
   .dish-card {
-    width: 287px;
-    height: 42px;
-    gap: 5px;
     display: flex;
     flex-direction: column;
-    align-items: start;
+    min-width: 0;
+    width: 100%;
+    gap: 5px;
+    padding-right: 0;
+    transition: padding-right 250ms ease;
+
+    .dish-ellipsis {
+      width: 100%;
+      display: block;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    .dish-title {
+      font-family: Roboto, serif;
+      font-weight: 500;
+      font-size: 18px;
+    }
+
+    .dish-desc {
+      width: 100%;
+      display: flex;
+    }
   }
-  h2 {
-    font-weight: 500;
-    font-size: 18px;
-    margin: 0;
-  }
+
   span {
     font-weight: 300;
     font-size: 15px;
     margin: 0;
   }
+
   .price {
-    display: flex;
-    flex-direction: row-reverse;
-    width: 27px;
-    height: 18px;
     font-weight: 700;
     font-size: 15px;
-    padding-top: 25px;
     text-decoration: none;
+    text-align: end;
+    transition: transform 250ms ease;
+  }
+}
+
+.dish-hit {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  cursor: pointer;
+  background: transparent;
+}
+
+.btn-order {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 15px;
+
+  button {
+    width: 186px;
+    height: 50px;
+    border-radius: 25px;
+    background: $button-gradient;
+    color: white;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  }
+
+  :hover {
+    opacity: 0.8;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.50);
   }
 }
 
@@ -717,29 +705,148 @@ $rect-h: 73px;
   animation: dishIn 1300ms ease forwards;
 }
 
-.dish-appetizer { animation-delay: 500ms; }
-.dish-main-course { animation-delay: 1000ms; }
-.dish-dessert { animation-delay: 1500ms; }
+.dish-appetizer {
+  animation-delay: 500ms;
+}
+.dish-main-course {
+  animation-delay: 1000ms;
+}
+.dish-dessert {
+  animation-delay: 1500ms;
+}
 
-.btn-order {
-  display: flex;
-  justify-content: center;
-  width: 100%;
+@media (min-width: 1024px) {
+
+  header {
+    height: 146px;
+  }
+
+  .logo {
+    height: 96px;
+
+    span {
+      top: 20px;
+      font-size: 40px;
+      height: 34px;
+    }
+  }
+
+  .explor {
+
+    h2 {
+      font-size: 40px;
+      font-weight: 700;
+      top: 176px;
+    }
+
+    span {
+      top: 255px;
+    }
+  }
+
+  .fonctions {
+    height: 128px;
+    display: flex;
+    gap: 25px;
+    position: unset;
+    padding: 50px 180px;
+    flex-direction: column;
+
+    h2 {
+      position: unset;
+      top: 0;
+      left: 0;
+
+    }
+
     button {
-      width: 186px;
-      height: 50px;
-      border-radius: 25px;
-      background: $button-gradient;
-      color: white;
-      border: none;
-      font-size: 16px;
-      font-weight: 500;
+      width: 322px;
+    }
+  }
+
+  .btn-fonctions {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding-left: 10px;
+  }
+
+  .restaurants {
+    padding: 0 180px 0 180px;
+    height: 664px;
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+      margin-bottom: 0;
       padding: 0;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
     }
-    :hover {
-      opacity: 0.8;
-      color: white;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.50);
+  }
+
+  .restaurants-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    width: 100%;
+    align-items: center;
+    height: 608px;
+    row-gap: 0;
+    column-gap: 100px;
+    padding: 0;
+  }
+
+  .footer-content {
+    flex-direction: row-reverse;
+    align-items: end;
+    padding: 30px 25px;
+    height: 54px;
+
+    .info {
+      flex-direction: row;
     }
+  }
+
+  //Menu des restaurants
+
+  .restaurant-page {
+    height: 96px;
+    width: 100%;
+  }
+
+  .restaurants-image {
+    img {
+      height: 383px;
+    }
+  }
+
+  .arrow {
+    top: 33px
+  }
+
+  .menu {
+    background: $main-bg-color;
+    width: 1055px;
+    height: 1221px;
+    display: flex;
+    border-radius: 35px 35px 0 0;
+    .menu-content {
+      width: 100%;
+      height: 1275px;
+    }
+    .menu-title {
+      justify-content: center;
+      h1 {
+        margin-right: 20px;
+      }
+      .menu-like {
+        margin-right: 0;
+      }
+    }
+  }
+  .dishes-content {
+    width: calc(100% - 421px);
+  }
+  .btn-order {
+    margin-top: 0;
+  }
 }
