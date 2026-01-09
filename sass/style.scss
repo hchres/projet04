@@ -6,12 +6,16 @@ $location-bg-color: #EAEAEA;
 $main-bg-color: #F6F6F6;
 $button-gradient: linear-gradient(#FF79DA, #9356DC);
 $main-color: #9356DC;
+$secondary-color: #FF79DA;
+$tertiary-color: #99E2D0;
 $icons-color: #9a9996;
 $footer-bg-color: #353535;
-$tertiary-color: #99E2D0;
 $new-text-color: #008766;
-$secondary-color: #FF79DA;
+$icons-color-store: #9356DC;
 
+$button-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+$button-shadow-hover: 0 4px 10px rgba(0, 0, 0, 0.50);
+$presenation-card: 0 4px 15px rgba(0, 0, 0, 0.15);
 body {
   display: flex;
   align-items: center;
@@ -176,13 +180,13 @@ header {
     font-size: 16px;
     font-weight: 500;
     padding: 0;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    box-shadow: $button-shadow;
   }
 
   :hover {
     opacity: 0.8;
     color: white;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.50);
+    box-shadow: $button-shadow-hover;
   }
 }
 
@@ -206,7 +210,7 @@ header {
     border-radius: 20px;
     border: none;
     background: $main-bg-color;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    box-shadow: $presenation-card;
     font-size: 16px;
     font-weight: 500;
     gap: 20px;
@@ -249,7 +253,7 @@ header {
     color: $icons-color;
   }
   .fa-store {
-    color: $icons-color;
+    color: $icons-color-store;
   }
 }
 
@@ -602,18 +606,18 @@ $rect-h: 100%;
 .dish-content {
   width: 100%;
   height: 72px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  box-shadow: $presenation-card;
 
-  button {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    border-radius: 15px;
-    padding: 15px;
-    background: white;
-    border: none;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
-  }
+  //button {
+  //  display: flex;
+  //  width: 100%;
+  //  height: 100%;
+  //  border-radius: 15px;
+  //  padding: 15px;
+  //  background: white;
+  //  border: none;
+  //  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
+  //}
 
   .dish-card {
     display: flex;
@@ -682,13 +686,13 @@ $rect-h: 100%;
     font-size: 16px;
     font-weight: 500;
     padding: 0;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    box-shadow: $button-shadow;
   }
 
   :hover {
     opacity: 0.8;
     color: white;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.50);
+    box-shadow: $button-shadow-hover;
   }
 }
 
@@ -829,7 +833,7 @@ $rect-h: 100%;
     width: 1055px;
     height: 1221px;
     display: flex;
-    border-radius: 35px 35px 0 0;
+    //border-radius: 35px 35px 0 0;
     .menu-content {
       width: 100%;
       height: 1275px;

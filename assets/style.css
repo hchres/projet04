@@ -181,7 +181,7 @@ header {
   color: #9a9996;
 }
 .btn-custom .fa-store {
-  color: #9a9996;
+  color: #9356DC;
 }
 
 .restaurants {
@@ -516,16 +516,6 @@ footer {
   height: 72px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
-.dish-content button {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  border-radius: 15px;
-  padding: 15px;
-  background: white;
-  border: none;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
 .dish-content .dish-card {
   display: flex;
   flex-direction: column;
@@ -707,7 +697,6 @@ footer {
     width: 1055px;
     height: 1221px;
     display: flex;
-    border-radius: 35px 35px 0 0;
   }
   .menu .menu-content {
     width: 100%;
