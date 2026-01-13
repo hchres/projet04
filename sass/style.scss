@@ -24,7 +24,6 @@ body {
   width: 100%;
   max-width: 100%;
   margin: 0;
-  //background-color: $main-bg-color;
 }
 
 //.loader {
@@ -279,7 +278,13 @@ header {
   gap: 18px;
 }
 
+.restaurant-card {
+  position: relative;
+}
+
 .restaurant-name {
+  display: flex;
+  flex-direction: column;
   background: white;
   border-radius: 15px;
   height: 251px;
@@ -291,12 +296,10 @@ header {
   height: 100%;
   width: 100%;
   overflow: hidden;
-  margin-bottom: -57px;
   border-radius: 15px;
 
   img {
     display: block;
-    margin: -57px 0 0 0;
     width: 100%;
     height: 90%;
     object-fit: cover;
@@ -324,6 +327,9 @@ header {
 }
 
 .restaurant-details {
+  //display: flex;
+  //flex-direction: column;
+  //justify-content: center;
   color: black;
   padding-left: 20px;
   position: relative;
@@ -347,10 +353,10 @@ header {
 }
 
 .like {
-  display: flex;
-  justify-content: end;
+  //display: flex;
+  //justify-content: end;
   position: absolute;
-  top: -5px;
+  top: 197px;
   right: 15px;
 }
 
@@ -478,6 +484,8 @@ footer {
   left: 17px;
   background: none;
   border: none;
+  cursor: pointer;
+  color: black;
 }
 
 .menu {
@@ -609,17 +617,6 @@ $rect-h: 100%;
   height: 72px;
   box-shadow: $presenation-card;
 
-  //button {
-  //  display: flex;
-  //  width: 100%;
-  //  height: 100%;
-  //  border-radius: 15px;
-  //  padding: 15px;
-  //  background: white;
-  //  border: none;
-  //  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
-  //}
-
   .dish-card {
     display: flex;
     flex-direction: column;
@@ -689,6 +686,7 @@ $rect-h: 100%;
     font-weight: 500;
     padding: 0;
     box-shadow: $button-shadow;
+    cursor: pointer;
   }
 
   :hover {
@@ -835,7 +833,7 @@ $rect-h: 100%;
     width: 1055px;
     height: 1221px;
     display: flex;
-    //border-radius: 35px 35px 0 0;
+
     .menu-content {
       width: 100%;
       height: 1275px;

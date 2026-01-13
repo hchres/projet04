@@ -204,7 +204,13 @@ header {
   gap: 18px;
 }
 
+.restaurant-card {
+  position: relative;
+}
+
 .restaurant-name {
+  display: flex;
+  flex-direction: column;
   background: white;
   border-radius: 15px;
   height: 251px;
@@ -216,12 +222,10 @@ header {
   height: 100%;
   width: 100%;
   overflow: hidden;
-  margin-bottom: -57px;
   border-radius: 15px;
 }
 .plate-img img {
   display: block;
-  margin: -57px 0 0 0;
   width: 100%;
   height: 90%;
   object-fit: cover;
@@ -267,10 +271,8 @@ header {
 }
 
 .like {
-  display: flex;
-  justify-content: end;
   position: absolute;
-  top: -5px;
+  top: 197px;
   right: 15px;
 }
 
@@ -390,6 +392,8 @@ footer {
   left: 17px;
   background: none;
   border: none;
+  cursor: pointer;
+  color: black;
 }
 
 .menu {
@@ -579,6 +583,7 @@ footer {
   font-weight: 500;
   padding: 0;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
 }
 .btn-order :hover {
   opacity: 0.8;
