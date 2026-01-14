@@ -1,6 +1,6 @@
 .idea
-test.html
 test.css
 test.scss
 test.css.map
-sass/test.*
+sass/test*
+test*.html
