@@ -4,3 +4,4 @@ test.scss
 test.css.map
 sass/test*
 test*.html
+assets/test*.css
